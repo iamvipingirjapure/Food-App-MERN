@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-primary: #FF9500;
+  --color-secondary: #FFCC00;
+  --color-dark: #1F2937;
+  --color-light: #F3F4F6;
+  --font-family-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+button {
+  cursor: pointer;
+}
