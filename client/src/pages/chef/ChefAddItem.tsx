@@ -21,7 +21,7 @@ const ChefAddItem: React.FC = () => {
           >
             <ChevronLeft className="w-5 h-5 text-slate-800" />
           </button>
-          <h2 className="text-xl font-bold text-slate-800">Add New Items</h2>
+          <h2 className="md:text-xl font-bold text-slate-800">Add New Items</h2>
         </div>
         <button className="text-orange-500 text-sm font-bold uppercase tracking-wider hover:text-orange-600">
           RESET

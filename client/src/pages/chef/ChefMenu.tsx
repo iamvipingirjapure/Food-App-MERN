@@ -58,9 +58,9 @@ const ChefMenu: React.FC = () => {
           onClick={() => navigate(-1)}
           className="p-2 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors mr-4"
         >
-          <ChevronLeft className="w-5 h-5 text-slate-800" />
+          <ChevronLeft className="w-5 h-5 text-orange-500" />
         </button>
-        <h2 className="text-xl font-bold text-slate-800">My Food List</h2>
+        <h2 className="md:text-xl font-bold text-slate-800">My Food List</h2>
       </div>
 
       {/* Category Filter */}

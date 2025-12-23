@@ -106,12 +106,11 @@ const ChefMessages: React.FC = () => {
           onClick={() => navigate(-1)}
           className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors mr-4"
         >
-          <ChevronLeft className="w-5 h-5 text-slate-800" />
+          <ChevronLeft className="w-5 h-5 text-orange-500" />
         </button>
-        <h2 className="text-xl font-bold text-slate-800">Notifications</h2>
+        <h2 className="md:text-xl font-bold text-slate-800">{activeTab}</h2>
       </div>
 
-      {/* Tabs */}
       <div className="flex border-b border-gray-100 mb-6">
         <button
           onClick={() => setActiveTab("Notifications")}

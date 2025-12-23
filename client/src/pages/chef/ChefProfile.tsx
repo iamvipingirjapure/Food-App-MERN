@@ -26,10 +26,10 @@ const ChefProfile: React.FC = () => {
         >
           <ChevronLeft className="w-5 h-5 text-orange-500" />
         </button>
-        <h2 className="text-xl font-bold text-gray-400">My Profile</h2>
+        <h2 className="md:text-xl font-bold text-black-400">My Profile</h2>
       </div>
 
-      <div className="bg-orange-500 rounded-3xl p-8 text-center text-white shadow-xl shadow-orange-200 mb-8 relative overflow-hidden">
+      <div className="bg-orange-500 rounded-3xl p-4 text-center text-white shadow-xl shadow-orange-200 mb-8 relative overflow-hidden">
         <div className="relative z-10">
           <p className="text-orange-100 text-sm mb-1 font-medium">
             Available Balance
@@ -47,7 +47,7 @@ const ChefProfile: React.FC = () => {
         <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
       </div>
 
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <button className="w-full flex items-center justify-between bg-gray-50 p-4 rounded-2xl hover:bg-gray-100 transition-colors">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-orange-500 shadow-sm">
@@ -103,7 +103,7 @@ const ChefProfile: React.FC = () => {
           <ChevronRight className="w-5 h-5 text-gray-400" />
         </button>
 
-        <button className="w-full flex items-center justify-between bg-gray-50 p-4 rounded-2xl hover:bg-gray-100 transition-colors mt-6">
+        <button className="w-full flex items-center justify-between bg-gray-50 p-4 rounded-2xl hover:bg-gray-100 transition-colors">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-500 shadow-sm">
               <LogOut className="w-5 h-5" />

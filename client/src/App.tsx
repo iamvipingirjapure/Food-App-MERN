@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import CategoryList from "./components/CategoryList";
 import RestaurantCard from "./components/RestaurantCard";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { ChevronRight } from "lucide-react";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -19,6 +20,8 @@ import ChefOrders from "./pages/chef/ChefOrders";
 import ChefMenu from "./pages/chef/ChefMenu";
 import ChefAddItem from "./pages/chef/ChefAddItem";
 import ChefProfile from "./pages/chef/ChefProfile";
+import ChefMessages from "./pages/chef/ChefMessages";
+import ChefReviews from "./pages/chef/ChefReviews";
 
 function Home() {
   const restaurants = [
@@ -74,7 +77,7 @@ function Home() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="md:col-span-2 lg:col-span-3">
                 <RestaurantCard
                   name={restaurants[0].name}
@@ -131,14 +134,23 @@ function App() {
         <Route path="/verification" element={<Verification />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        {/* Chef/Vendor Routes */}
-        <Route path="/chef" element={<ChefLayout />}>
+        {/* Chef Routes - Protected, admin role only */}
+        <Route
+          path="/chef"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <ChefLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<ChefDashboard />} />
           <Route path="orders" element={<ChefOrders />} />
           <Route path="menu" element={<ChefMenu />} />
           <Route path="add-item" element={<ChefAddItem />} />
           <Route path="profile" element={<ChefProfile />} />
+          <Route path="messages" element={<ChefMessages />} />
+          <Route path="reviews" element={<ChefReviews />} />
         </Route>
       </Routes>
     </Router>

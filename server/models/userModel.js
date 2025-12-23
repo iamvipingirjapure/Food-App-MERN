@@ -11,7 +11,11 @@ const userSchema = new mongoose.Schema(
     userPassword: { type: String, required: [true, "Please add a password"] },
     userAddress: { type: String },
     userPhoneNumber: { type: String },
-    userType: { type: String, enum: ["client", "admin"], default: "client" },
+    userType: {
+      type: String,
+      enum: ["user", "chef"],
+      default: "user",
+    },
     userProfilePicture: { type: String },
   },
   { timestamps: true }

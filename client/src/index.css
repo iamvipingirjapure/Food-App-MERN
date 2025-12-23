@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @theme {
   --color-primary: #FF9500;
   --color-secondary: #FFCC00;
   --color-dark: #1F2937;
   --color-light: #F3F4F6;
   --font-family-body: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  input {
+    @apply outline-none;
+  }
+
+  input:focus {
+    @apply ring-1 ring-orange-500/50 bg-white;
+  }
 }
 
 body {
